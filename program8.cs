@@ -6,6 +6,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+//dotnet add package Swashbuckle.AspNetCore
 
 // Enable Swagger only in Development
 if (app.Environment.IsDevelopment())
