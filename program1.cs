@@ -5,25 +5,20 @@ class Program
     static void Main()
     {
         Console.Write("Enter a number: ");
-        
-        if (!int.TryParse(Console.ReadLine(), out int num))
-        {
-            Console.WriteLine("Invalid input. Please enter an integer.");
-            return;
-        }
+        int num = int.Parse(Console.ReadLine());
+        int fact = 1;
 
         if (num < 0)
         {
-            Console.WriteLine("Factorial not possible for negative numbers.");
-            return;
+            Console.WriteLine("Factorial not possible.");
         }
-
-        int fact = 1;
-        for (int i = 1; i <= num; i++)
+        else
         {
-            fact *= i;
+            for (int i = 1; i <= num; i++)
+            {
+                fact *= i;
+            }
+            Console.WriteLine("Factorial = " + fact);
         }
-
-        Console.WriteLine("Factorial = " + fact);
     }
 }
